@@ -35,6 +35,10 @@ public class Composite implements Elemento{
         this.elementos.add(elemento);
     }
 
+    public void removerElementos(){
+        this.elementos.clear();
+    }
+
     @Override
     public void showOptions() {
         System.out.println(this.getLabel());

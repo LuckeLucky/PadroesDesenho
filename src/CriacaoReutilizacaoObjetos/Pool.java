@@ -36,6 +36,7 @@ public class Pool {
         for(int i =0 ; i< compositesUsed.size(); i++){
             if( compositesUsed.get(i).getLabel().equals(composite.getLabel())){
                c = compositesUsed.get(i);
+               c.removerElementos();
                compositesUsed.remove(i);
                break;
             }
