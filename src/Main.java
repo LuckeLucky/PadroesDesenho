@@ -1,6 +1,9 @@
 import Autenticação.Autenticacao;
 import CriacaoReutilizacaoObjetos.Factory;
 import CriacaoReutilizacaoObjetos.Pool;
+import CustoTransporte.PrecoTransporte;
+import CustoTransporte.PrecoTransporteEpocaEspecial;
+import CustoTransporte.PrecoTransporteEpocaNormal;
 import Transporte.*;
 
 public class Main {
@@ -18,10 +21,8 @@ public class Main {
         Caixa.adicionarElemento(Embalagem);
         Contentor.adicionarElemento(Caixa);
         Contentor.showOptions();
-        p.releaseComposite(Contentor);
-        Composite c2 = p.acquireComposite("Contentor");
-        c2.showOptions();
-        System.out.println("preco ="+Contentor.PrecoTotal());
+        PrecoTransporte pt = new PrecoTransporteEpocaNormal(Contentor);
+        pt.precoTransporte();
 
 
     }
