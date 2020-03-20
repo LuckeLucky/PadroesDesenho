@@ -2,9 +2,9 @@ package CriacaoReutilizacaoObjetos;
 
 import Transporte.*;
 
-public abstract class Factory {
+public abstract class FabricaObjetosCarga {
 
-    public static Composite makeProduct(String type){
+    public static Composite fazerObjectoCarga(String type){
         Composite e;
 
         switch(type){

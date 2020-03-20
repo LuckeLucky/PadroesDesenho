@@ -1,37 +1,22 @@
 package Transporte;
 
-public class Leaf implements Elemento {
+public class Leaf extends Elemento {
 
-    String label;
-    double preco;
-
-    public String getLabel() {
-        return label;
+    public Leaf(String label,float preco){
+        super(label);
+        super.preco = preco;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
+    @Override
+    public float precoTotal() {
+        return super.preco;
     }
 
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public Leaf(String label) {
-        this.setLabel(label);
-    }
 
     @Override
     public void showOptions() {
+
         System.out.println(this.getLabel());
     }
 
-    @Override
-    public double PrecoTotal(){
-        return this.getPreco();
-    }
 }

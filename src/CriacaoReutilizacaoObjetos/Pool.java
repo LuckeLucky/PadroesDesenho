@@ -36,7 +36,7 @@ public class Pool {
         for(int i =0 ; i< compositesUsed.size(); i++){
             if( compositesUsed.get(i).getLabel().equals(composite.getLabel())){
                c = compositesUsed.get(i);
-               c.removerElementos();
+               c.limpar();
                compositesUsed.remove(i);
                break;
             }
@@ -45,7 +45,7 @@ public class Pool {
     }
 
     public synchronized Composite createComposite(String type){
-        Composite c = Factory.makeProduct(type);
+        Composite c = FabricaObjetosCarga.fazerObjectoCarga(type);
         compositesUsed.add(c);
         return c;
     }

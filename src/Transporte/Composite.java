@@ -2,40 +2,23 @@ package Transporte;
 
 import java.util.ArrayList;
 
-public class Composite implements Elemento{
+public class Composite extends Elemento{
 
     private ArrayList<Elemento> elementos;
 
-    String label;
-    double preco;
-
     public Composite(String label) {
-        this.setLabel(label);
+        super(label);
         this.elementos = new ArrayList<>();
     }
 
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-
     public void adicionarElemento(Elemento elemento){
+
         this.elementos.add(elemento);
     }
 
-    public void removerElementos(){
+    public void limpar(){
+
+        super.preco=0;
         this.elementos.clear();
     }
 
@@ -48,12 +31,12 @@ public class Composite implements Elemento{
     }
 
     @Override
-    public double PrecoTotal(){
-        double soma = 0;
+    public float precoTotal(){
+        float soma = 0;
         for(int i=0;i<elementos.size();i++){
-           soma += elementos.get(i).PrecoTotal();
+           soma += elementos.get(i).precoTotal();
         }
-        this.setPreco(soma);
+        super.preco = soma;
         return soma;
     }
 }

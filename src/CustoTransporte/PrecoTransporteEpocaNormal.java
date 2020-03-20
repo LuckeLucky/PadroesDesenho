@@ -11,6 +11,6 @@ public class PrecoTransporteEpocaNormal extends PrecoTransporte {
 
     @Override
     public void precoTransporte() {
-        System.out.println("Preço do transporte em epoca Normal ="+elemento.PrecoTotal()*0.05);
+        System.out.println("Preço do transporte em epoca Normal ="+elemento.precoTotal()*0.05);
     }
 }
