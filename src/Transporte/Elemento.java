@@ -2,8 +2,8 @@ package Transporte;
 
 public abstract class Elemento {
 
-     String label;
-     float preco;
+     private String label;
+     private float preco;
 
      public Elemento(String label) {
           this.label = label;
@@ -17,7 +17,12 @@ public abstract class Elemento {
           return preco;
      }
 
+     public void setPreco(float preco){
+          this.preco = preco;
+     }
+
      public abstract float precoTotal();
-     public abstract void showOptions();
+
+     public abstract void mostrarConteudo();
 }
 

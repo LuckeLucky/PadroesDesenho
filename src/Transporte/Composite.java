@@ -18,15 +18,15 @@ public class Composite extends Elemento{
 
     public void limpar(){
 
-        super.preco=0;
+        super.setPreco(0);
         this.elementos.clear();
     }
 
     @Override
-    public void showOptions() {
+    public void mostrarConteudo() {
         System.out.println(this.getLabel());
         for(int i=0;i<elementos.size();i++){
-            elementos.get(i).showOptions();
+            elementos.get(i).mostrarConteudo();
         }
     }
 
@@ -36,7 +36,7 @@ public class Composite extends Elemento{
         for(int i=0;i<elementos.size();i++){
            soma += elementos.get(i).precoTotal();
         }
-        super.preco = soma;
+        super.setPreco(soma);
         return soma;
     }
 }
