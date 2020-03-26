@@ -44,7 +44,7 @@ public class Pool {
         composites.add(c);
     }
 
-    public synchronized Composite createComposite(String type){
+    public synchronized Composite createComposite(String type) throws ObjectoCargaInexistente {
         Composite c = FabricaObjetosCarga.fazerObjectoCarga(type);
         compositesUsed.add(c);
         return c;

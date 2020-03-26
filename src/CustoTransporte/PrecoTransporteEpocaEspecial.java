@@ -1,16 +1,9 @@
 package CustoTransporte;
 
-
-import Transporte.Elemento;
-
-public class PrecoTransporteEpocaEspecial extends PrecoTransporte {
-
-    public PrecoTransporteEpocaEspecial(Elemento elemento) {
-        super(elemento);
-    }
+public class PrecoTransporteEpocaEspecial implements PrecoTransporte {
 
     @Override
-    public void precoTransporte() {
-        System.out.println("Preço do transporte em epoca Especial ="+elemento.precoTotal()*0.10);
+    public float percentagemPreco() {
+        return 0.10f;
     }
 }

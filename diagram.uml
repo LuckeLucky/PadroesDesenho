@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="169.0" y="189.0">Transporte.Composite</node>
+    <node x="159.0" y="353.0">CustoTransporte.PrecoTransporte</node>
+    <node x="0.0" y="211.0">Transporte.Leaf</node>
+    <node x="248.0" y="456.0">CustoTransporte.PrecoTransporteEpocaEspecial</node>
+    <node x="0.0" y="554.0">Autenticação.Autenticacao</node>
+    <node x="104.25" y="0.0">Transporte.Elemento</node>
+    <node x="297.0" y="554.0">CriacaoReutilizacaoObjetos.FabricaObjetosCarga</node>
+    <node x="0.0" y="456.0">CustoTransporte.PrecoTransporteEpocaNormal</node>
+    <node x="535.0" y="353.0">CriacaoReutilizacaoObjetos.Pool</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Transporte.Composite" target="Transporte.Elemento">
+      <point x="0.0" y="-59.5" />
+      <point x="283.0" y="164.0" />
+      <point x="216.0" y="164.0" />
+      <point x="37.25" y="69.5" />
+    </edge>
+    <edge source="CustoTransporte.PrecoTransporteEpocaNormal" target="CustoTransporte.PrecoTransporte">
+      <point x="0.0" y="-26.5" />
+      <point x="114.0" y="431.0" />
+      <point x="200.25" y="431.0" />
+      <point x="-41.25" y="26.5" />
+    </edge>
+    <edge source="CustoTransporte.PrecoTransporteEpocaEspecial" target="CustoTransporte.PrecoTransporte">
+      <point x="0.0" y="-26.5" />
+      <point x="369.0" y="431.0" />
+      <point x="282.75" y="431.0" />
+      <point x="41.25" y="26.5" />
+    </edge>
+    <edge source="Transporte.Leaf" target="Transporte.Elemento">
+      <point x="0.0" y="-37.5" />
+      <point x="74.5" y="164.0" />
+      <point x="141.5" y="164.0" />
+      <point x="-37.25" y="69.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9" x="1079.0" y="651.5555555555555" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

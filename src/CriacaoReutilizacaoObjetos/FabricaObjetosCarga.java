@@ -4,19 +4,19 @@ import Transporte.*;
 
 public abstract class FabricaObjetosCarga {
 
-    public static Composite fazerObjectoCarga(String type){
+    public static Composite fazerObjectoCarga(String tipo) throws ObjectoCargaInexistente{
+        tipo = tipo.toLowerCase();
         Composite e;
 
-        switch(type){
-            case "Caixa":
+        switch(tipo){
+            case "caixa":
                 e = new Composite("Caixa");
                 break;
-            case "Contentor":
+            case "contentor":
                 e = new Composite("Contentor");
                 break;
             default:
-                e = null;
-                break;
+                throw new ObjectoCargaInexistente();
         }
         return e;
     }
