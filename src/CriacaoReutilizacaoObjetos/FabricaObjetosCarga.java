@@ -1,18 +1,17 @@
 package CriacaoReutilizacaoObjetos;
 
-import Transporte.*;
+import Transporte.Composite;
 
 public abstract class FabricaObjetosCarga {
 
     public static Composite fazerObjectoCarga(String tipo) throws ObjectoCargaInexistente{
-        tipo = tipo.toLowerCase();
         Composite e;
 
         switch(tipo){
-            case "caixa":
+            case "Caixa":
                 e = new Composite("Caixa");
                 break;
-            case "contentor":
+            case "Contentor":
                 e = new Composite("Contentor");
                 break;
             default:

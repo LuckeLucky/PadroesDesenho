@@ -5,7 +5,7 @@ import Transporte.*;
 
 public class Main {
     public static void main(String args[]){
-        Pool p = Pool.getInstance();
+        Pool p = Pool.getInstancia();
         Composite Contentor = null;
         Composite Caixa = null;
         try {

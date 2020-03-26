@@ -5,7 +5,7 @@ import Transporte.Composite;
 import java.util.ArrayList;
 
 public class Pool {
-    private static Pool instance=null;
+    private static Pool instancia=null;
     private ArrayList<Composite> composites;
     private ArrayList<Composite> compositesUsed;
 
@@ -15,20 +15,20 @@ public class Pool {
         compositesUsed = new ArrayList<>();
     }
 
-    public static synchronized Pool getInstance() {
-        if( instance== null ){
-            instance = new Pool();
+    public static synchronized Pool getInstancia() {
+        if( instancia== null ){
+            instancia = new Pool();
         }
-        return instance;
+        return instancia;
     }
 
-    public synchronized Composite acquireComposite(String type){
+    public synchronized Composite acquireComposite(String type) throws ObjectoCargaInexistente{
         for(int i =0 ; i< composites.size(); i++){
            if( composites.get(i).getLabel().equals(type)){
                return composites.get(i);
            }
         }
-        return null;
+        throw new ObjectoCargaInexistente();
     }
 
     public synchronized void releaseComposite(Composite composite){

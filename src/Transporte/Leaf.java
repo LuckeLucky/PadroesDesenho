@@ -4,18 +4,17 @@ public class Leaf extends Elemento {
 
     public Leaf(String label,float preco){
         super(label);
-        super.preco = preco;
+        super.setPreco(preco);
     }
 
     @Override
     public float precoTotal() {
-        return super.preco;
+        return super.getPreco();
     }
 
 
     @Override
-    public void showOptions() {
-
+    public void mostrarConteudo() {
         System.out.println(this.getLabel());
     }
 

@@ -10,11 +10,10 @@ public class PercentagemPreco {
     }
 
     public float getPercentagem(String epoca) throws EpocaInexistente {
-        epoca = epoca.toLowerCase();
         switch(epoca){
-            case "normal":
+            case "Normal":
                 return precoTransporteEpocaNormal.percentagemPreco();
-            case "especial":
+            case "Especial":
                 return precoTransporteEpocaEspecial.percentagemPreco();
             default:
                 throw new EpocaInexistente();
